@@ -43,8 +43,8 @@ export class DataEventConsumer {
   kafkaStreams: KafkaStreams;
   constructor() {
     this.kafkaStreams = new KafkaStreams(config);
-
   }
+
   subscribe(): void {
     const kafkaTopicName = topic;
     const stream = this.kafkaStreams.getKStream(kafkaTopicName);
